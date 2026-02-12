@@ -34,8 +34,8 @@ export default function PrayerRequestsPage() {
           <div className="heading_container mb-5">
             <h2 className='text-light'>Dejanos tus pedidos de oración</h2>
             <p className="w-50 font-italic text-light">
-              "Y la oración de fe salvará al enfermo, y el Señor lo levantará; y
-              si hubiere cometido pecados, le serán perdonados"
+              &ldquo;Y la oración de fe salvará al enfermo, y el Señor lo levantará; y
+              si hubiere cometido pecados, le serán perdonados&rdquo;
               <cite className="d-block mt-2">Santiago 5:16</cite>
             </p>
           </div>
