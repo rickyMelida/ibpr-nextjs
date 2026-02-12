@@ -63,7 +63,7 @@ export default function ActivitiesPage() {
                         <h5>{activity.title}</h5>
                         <p>{activity.excerpt}</p>
                         <div>
-                          <a href="#" className="btn btn-warning">
+                          <a href={`/actividades/${activity.id}`} className="btn btn-warning">
                             ver detalles
                           </a>
                         </div>

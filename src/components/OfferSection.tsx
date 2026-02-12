@@ -1,5 +1,7 @@
 'use client';
 
+import { getNearestSunday, getNearestWednesday, mapMonth } from "@/utils";
+
 /**
  * Offer/Activities highlight section component
  * Single Responsibility: Display featured activities
@@ -14,21 +16,26 @@ interface OfferSectionProps {
   }>;
 }
 
+
+
 export default function OfferSection({ activities }: OfferSectionProps) {
+  const nextSunday = getNearestSunday();
+  const nextwednesday = getNearestWednesday();
+
   const defaultActivities = [
     {
       id: '1',
-      title: 'Festejo día de la juventud',
-      date: '21',
-      month: 'Septiembre',
-      imageUrl: '/images/activities/act_1.jpg',
+      title: 'Estudio Bíblico Dominical',
+      date: nextSunday.getDate().toString(),
+      month: mapMonth(nextSunday.getMonth()),
+      imageUrl: '/images/slideshow/image_3.jpg',
     },
     {
       id: '2',
-      title: 'Festejo Dia del Pastor',
-      date: '15',
-      month: 'Noviembre',
-      imageUrl: '/images/activities/act_3.jpg',
+      title: 'Reunión de Oración Miércoles',
+      date: nextwednesday.getDate().toString(),
+      month: mapMonth(nextwednesday.getMonth()),
+      imageUrl: '/images/slideshow/image_1.jpg',
     },
   ];
 

@@ -79,3 +79,39 @@ export function isValidEmail(email: string): boolean {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
+
+
+export function getNearestSunday(date: Date = new Date()): Date {
+    const current = new Date(date);
+    const day = current.getDay();
+
+    if (day === 0)
+        return current;
+    
+    const daysToNextSunday = 7 - day;
+    current.setDate(current.getDate() + daysToNextSunday);
+
+    return current;
+}
+
+export function getNearestWednesday(date: Date = new Date()): Date {
+    const current = new Date(date);
+    const day = current.getDay();
+
+    if (day === 3)
+        return current;
+
+    const daysToNextWednesday = (3 - day + 7) % 7;
+    current.setDate(current.getDate() + daysToNextWednesday);
+
+    return current;
+}
+
+export function mapMonth(month: number): string {
+    const months = [
+        'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+        'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
+    ];
+
+    return months[month] || '';
+}
