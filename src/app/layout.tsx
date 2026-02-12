@@ -43,6 +43,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="/css/style.css" />
         <link rel="stylesheet" href="/css/responsive.css" />
         <link rel="stylesheet" href="/css/blog.css" />
+        <link rel="stylesheet" href="/css/blog-enhanced.css" />
       </head>
       <body>
         {children}

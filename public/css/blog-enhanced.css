@@ -1,0 +1,242 @@
+/* Blog Enhanced Styles - Better Reading Experience */
+
+/* Article Content Typography */
+.article-content {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.article-content p {
+  text-align: justify;
+  margin-bottom: 1.5rem;
+  word-spacing: 0.05em;
+}
+
+.article-content p:first-of-type::first-letter {
+  font-size: 3.5rem;
+  line-height: 1;
+  float: left;
+  margin: 0.1em 0.1em 0 0;
+  font-weight: bold;
+  color: #f4a460;
+}
+
+/* Card Hover Effects */
+.single_post {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.single_post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Hover Effects */
+.img-post img {
+  transition: transform 0.3s ease;
+}
+
+.single_post:hover .img-post img {
+  transform: scale(1.05);
+}
+
+.img-post {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Tag Buttons */
+.categories-clouds li {
+  display: inline-block;
+  margin: 0.3rem;
+}
+
+.categories-clouds .btn {
+  transition: all 0.3s ease;
+}
+
+.categories-clouds .btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(244, 164, 96, 0.3);
+}
+
+/* Comment Section */
+.comment-reply li {
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.comment-reply li:last-child {
+  border-bottom: none;
+}
+
+/* Search Bar Enhancement */
+.search .input-group {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.search .input-group-text {
+  background-color: #fff;
+  border: none;
+}
+
+.search .form-control {
+  border: none;
+  box-shadow: none;
+}
+
+.search .form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Badge Styling */
+.badge-warning {
+  background-color: #f4a460;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.badge-warning:hover {
+  background-color: #e69448;
+  transform: translateY(-2px);
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+  .article-content {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .article-content p:first-of-type::first-letter {
+    font-size: 2.5rem;
+  }
+
+  h1 {
+    font-size: 1.8rem !important;
+  }
+}
+
+/* Loading Animation for Images */
+.img-post img {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Button Enhancements */
+.btn-warning {
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-warning:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(244, 164, 96, 0.4);
+}
+
+/* Form Elements */
+.form-control {
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+  padding: 0.75rem 1rem;
+}
+
+.form-control:focus {
+  border-color: #f4a460;
+  box-shadow: 0 0 0 0.2rem rgba(244, 164, 96, 0.25);
+}
+
+/* Card Improvements */
+.card {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1.5rem;
+}
+
+.card .header {
+  background-color: #f8f9fa;
+  border-radius: 12px 12px 0 0;
+  padding: 1.5rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.card .body {
+  padding: 1.5rem;
+}
+
+/* Newsletter Section */
+.newsletter .input-group {
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter .form-control {
+  border: none;
+  padding: 0.75rem 1.5rem;
+}
+
+.newsletter .btn {
+  padding: 0.75rem 1.25rem;
+  border: none;
+}
+
+/* Social Share Buttons */
+.btn-outline-primary:hover,
+.btn-outline-info:hover,
+.btn-outline-success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Related Articles Grid */
+.related-articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Back Button */
+.btn-outline-warning {
+  transition: all 0.3s ease;
+}
+
+.btn-outline-warning:hover {
+  background-color: #f4a460;
+  transform: translateX(-5px);
+}
+
+/* Article Header Spacing */
+h1, h2, h3, h4, h5 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection Color */
+::selection {
+  background-color: #f4a460;
+  color: white;
+}
